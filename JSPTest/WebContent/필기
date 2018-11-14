@@ -1,3 +1,4 @@
+
 JSP, Java Server Pages
 - 서블릿의 일종
 - 손 빠른 개발자 2
@@ -9,18 +10,22 @@ JSP, Java Server Pages
 - JSP 단점 : 자바 문법 작성이 불편하다.
 
 
+
+
 JSP 구성 요소
 - 주석, Comment
-- JSP 지시어(지시자), JSP directive
+- JSP 지시어(지시자), JSP Directive
 - 스크립트 요소, Scripting Elements
 - 액션 태그, Action Tag
 
+
 JSP 주석
 - *.jsp 내에서 사용하는 주석
-   a. <!-- -->
-   b. <%-- --%>
-   c. 스크립트 요소내의 자바 주석
-   
+	a. <!-- --> : HTML 주석
+	b. <%-- --%> : JSP 주석
+	c. 스크립트 요소내의 자바 주석
+
+
 
 JSP 지시자, JSP Directive
 - <%@ XXX %>
@@ -29,6 +34,7 @@ a. page 지시자
 b. include 지시자
 c. taglib 지시자
 
+
 스크립트 요소, Scripting Elements
 - <% %>
 - 자바 구문을 지원하는 역할
@@ -36,59 +42,59 @@ a. 스크립틀릿, Scriptlet : <% %>
 b. 익스프레이션, Expression : <%= %>
 c. 선언부, Declaration : <%! %>
 
+
 액션 태그, Action Tag
 - <xx:XXX>, <c:if>, <jsp:include>
 - 태그 형식을 빌린 자바 명령어
-a. JSP 기본 액션 태그 <jsp:XXX>
+a. JSP 기본 액션 태그 : <jsp:XXX>
 b. JSTL 확장 액션 태그 : <c:XXX>
 c. 사용자 커스텀 액션 태그 : <xxx:XXX>
 
 
-----------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
 
 page 지시자
-- <%@ page 속성="값" 속성="값"..%>
+- <%@ page 속성="값" 속성="값".. %>
 - <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
-a. language
-   - JSP 페이지에서 사용하는 프로그래밍 언어 지정
-   - 기본값 "java"
-   
-b. contentType 
-   - 웹 페이지의 내용물 형식을 브라우저에 알려주는 역할
-   - contentType="text/html; charset=UTF-8"
-   - "text/html" : MIME(Multipurpose Internet Mail Extension)
-   - contentType="text/html; charset=ISO-8859-1" //이클립스 기본 설정(EUR-KR, MS949)
-   - 문서 형식 + 인코딩 종류 > 브라우저에 알려주는 역할
-
-c. pageEncoding
-   - 현재 페에지의 인코딩 문자셋
-   - 기본값 : ISO-8859-1 > UTF-8
-   - 이 처리를 안하면 한글 깨짐
-   - contentTyhpe과 동일하게 설정
-   
-d. import(*)
-   - 패키지 or 클래스 참조
-   - 자바의 import문과 동일한 역할
-
-
-e. session
-   - 세션 사용 유무 설정
-   - 기본값 : true
-
-f. buffer 
-   - JSP 페이지의 출력 버퍼 크기 지정
-   - 기본값 : 8KB
-
-g. info
-   - 페이지 대한 설명(개발자용)
-
-h. errorPage
-   - 에러 페이지로 사용할 페이지 지정 > 에러 발생 시 해당 페이지로 자동 이동
-   
-   
-i. isErrorPage
-   - 본인이 에러 페이지라고 선언 
+	a. language(*)
+		- JSP 페이지에서 사용하는 프로그래밍 언어 지정
+		- 기본값 "java"
+	
+	b. contentType(*)
+		- 웹 페이지의 내용물 형식을 브라우저에 알려주는 역할
+		- contentType="text/html; charset=UTF-8"
+		- "text/html" : MIME(Multipurpose Internet Mail Extension)
+		- contentType="text/html; charset=ISO-8859-1" //이클립스 기본 설정(EUR-KR, MS949)
+		- 문서 형식 + 인코딩 종류 > 브라우저에 알려주는 역할
+	
+	c. pageEncoding(*)
+		- 현재 페이지의 인코딩 문자셋
+		- 기본값 : ISO-8859-1 > UTF-8
+		- 이 처리를 안하면 한글 깨짐
+		- contentType과 동일하게 설정
+	
+	d. import(*)
+		- 패키지 or 클래스 참조
+		- 자바의 import문과 동일한 역할
+	
+	e. session
+		- 세션 사용 유무 설정
+		- 기본값 : true
+	
+	f. buffer
+		- JSP 페이지의 출력 버퍼 크기 지정
+		- 기본값 : 8KB
+	
+	g. info
+		- 페이지 대한 설명(개발자용)
+		
+	h. errorPage(*)
+		- 에러 페이지로 사용할 페이지 지정 > 에러 발생 시 해당 페이지로 자동 이동
+	
+	i. isErrorPage(*)
+		- 본인이 에러 페이지라고 선언
+		
 
 include 지시자
 - <%@ include file="URL" %>
@@ -99,11 +105,13 @@ include 지시자
 - ex) 주메뉴, 서브메뉴, 푸터, 로그인박스 등..
 
 
+
 taglib 지시자
 - JSTL, 커스텀 태그 등을 사용하기 위해서 지정하는 지시자
 - 나중에 수업
 
---------------------------------------------------------지시자(page, include)
+
+----------------------------------------------------- 지시자(page, include)
 
 JSP 스크립트 요소
 - JSP 페이지내에서 자바 구문을 지원하는 요소
@@ -111,13 +119,14 @@ a. 선언문
 b. 스크립틀릿
 c. 표현식
 
+
 스크립틀릿, Scriptlet
 - <% %>
 - 이 영역은 자바 영역이다.(톰캣에게)
 - 비즈니스 코드 작성(업무 구현)
-   - 데이터 조작/가공
-   - JDBC 오라클 접근
-   - 동적 HTML 제어
+	- 데이터 조작/가공
+	- JDBC 오라클 접근
+	- 동적 HTML 제어
 - 사용 빈도 높음
 - JSP > 서블릿 service() 메소드의 영역
 
@@ -129,17 +138,23 @@ c. 표현식
 - JSP > 서블릿 service() 내의 out.print(값) 인자값 전달
 
 
+
 선언문, Declaration
 - <%! %>
 - JSP 페이지의 멤버 변수 or 메소드를 선언하는 역할
 - JSP > 서블릿 멤버(변수, 메소드) 영역
 
---------------------------------------------------------------------------------스트립팅 요소
+
+-------------------------------------------------------------- 스트립팅 요소
+
+
+
 JSP 내장 객체, Implicit Object
-	- 개발자가 직접 만들지 않아도 미리 예약된 표현을 통해 제공되는 객체들
-	- JSP 페이지가 서블릿 클래스로 변환될 떄 상위 클래스로부터 상속받은 멤버 변수
-	- request, response, session, pageContext, out //사용 빈도 높음
-	- application, config, page, exception //사용 빈도 낮음
+- 개발자가 직접 만들지 않아도 미리 예약된 표현을 통해 제공되는 객체들
+- JSP 페이지가 서블릿 클래스로 변환될 때 상위 클래스로부터 상속받은 멤버 변수
+- request, response, session, pageContext, out //사용 빈도 높음
+- application, config, page, exception //사용 빈도 낮음
+
 
 a. request 객체
 	- 클라이언트 -> (모든 행동) -> 서버
@@ -147,51 +162,209 @@ a. request 객체
 	
 	1. 요청 파라미터 가져오기
 		- 클라이언트가 서버로 보낸 데이터를 가져오기
-		- ex06_request_form.jsp  > 사용자 데이터 입력(<form>)
-		- ex06_request_procdess.jsp > 수신 처리 역활
+		- ex06_request_form.jsp : 사용자 데이터 입력(<form>)
+		- ex06_request_process.jsp : 수신 + 처리 역할
 		- ex07_request_form.jsp
 		- ex07_request_process.jsp
+	
 	2. HTTP 요청 헤더 정보 가져오기
 		- 가끔씩 필요한 정보
 		- ex08_request_header.jsp
+
 	3. 세션 처리
 		- 나중에
+	
 	4. 쿠키 처리
 		- 나중에
+		
 	5. URL 처리
 		- 나중에
+	
 	6. 인코딩 처리
 		- 나중에
+	
 	7. 데이터 입출력
-		- request 객체 내부에 사용자 데이터를 저장할 수 있는 맵형태의 저장 공간이 잇따.
+		- request 객체 내부에 사용자 데이터를 저장할 수 있는 맵형태의 저장 공간이 있다.
+
+
 b. response
-	- 서버  > (모든 행동) > 클라이언트
+	- 서버 -> (모든 행동) -> 클라이언트
 	- javax.servlet.http.HttpServletResponse 클래스
 	
 	a. 응답 컨텐츠 작성
 		- 나중에
+	
 	b. 페이지 이동하기
+		- response.sendRedirect(URL)
+		- 서버측 이동
 		- ex09_response_one.jsp
 		- ex09_response_two.jsp
+	
 	c. 쿠키 처리
+		- 나중에
 	
 	d. 인코딩 처리
-	
-	페이지 요청 방식 구분하는 방법(method)
-	- 브라우저가 서버에게 페이지를 요구하면..서버는 아래 중 한가지 방법으로 HTTP 요청이 발생
-	1. POST
-	2. GET
-	- ex10_method_one.jsp
-	- ex10_method_two.jsp
-	
+		- 나중에
+
+
+
+페이지 요청 방식 구분하는 방법(method)
+- 브라우저가 서버에게 페이지를 요구하면.. 서버는 아래 중 한가지 방법으로 HTTP 요청이 발생
+1. POST
+2. GET
+- ex10_method_one.jsp
+- ex10_method_two.jsp
+
+
+
 c. pageContext
 	- 한 페이지 요청 ~ 응답까지 과정에 관련된 여러가지 행동을 하는 객체
-	- request/response 유사
+	- request/response와 유사
 	
 	1. 데이터 입출력
-    	- ex11_pagecontext.jsp
-   	2. 페이지 이동
-   		- response.sendRedirect(URL)
-   		- pageContext.forward(URL)
-   		- ex12_pagecontext_one.jsp
-   		- ex12_pagecontext_two.jsp
+		- ex11_pagecontext.jsp
+	
+	2. 페이지 이동
+		- response.sendRedirect(URL)
+		- pageContext.forward(URL)
+		- ex12_pagecontext_one.jsp
+		- ex12_pagecontext_two.jsp
+	
+		
+
+d. out
+	- 응답 페이지 작성하는 객체
+	- ex13_out.jsp
+
+
+e. application
+	- 웹 애플리케이션을 운용하는 서버에 관련된 정보를 관리
+	
+	1. 데이터 저장
+		- setAttribute(), getAttribute()
+	
+	2. 서버 환경 정보
+		- ex14_application.jsp
+
+
+
+f. session
+	- 내장 객체 가장 중요한 객체
+	- 개념(*****)
+	- 사용자의 첫 요청 때 서버 메모리에 세션 객체 생성 -> 타이머 동작(20분) -> 재요청(같은 페이지 or 다른 페이지) 타이머 리셋(20분) x 반복 ->  타이머 만료 -> 세션 객체 소멸
+	- 현재 사용자의 개인 정보 저장 + 서버 입장에서 사용자의 접속 상태 확인(관리)
+	- 접속한 사용자마다 개인의 세션 객체 생성 -> 절대로 다른 유저의 세션을 접근 불가능
+	- 휘발성 -> 접속 중에서 유효한 객체
+	- ex15_session.jsp
+	
+	- ex16_session_one.jsp
+	- ex16_session_two.jsp
+	
+	
+	
+내장 객체의 데이터 입출력(*****)
+	- pageContext, request, session, application
+	- getter : Object getAttribute(String key)
+	- setter : void setAttribute(String key, Object value)
+	- *** 위의 내장 객체들을 각각의 생명 주기가 다르다.(어디다 저장할지 결정!!!)
+	- 생명 주기 -> Scope(Servlet/JSP)
+	- pageContext < request < session < application
+	
+	- ex17_scope_one.jsp
+	- ex17_scope_two.jsp
+	
+	- request vs pageContext
+	- ex18_scope_full.jsp //include
+	- ex18_scope_part.jsp //조각 페이지
+
+
+
+액션 태그, Action Tag
+- 프로그래밍 기능이 있는 태그
+- JSP 페이지에서 자바 코딩 -> 스크립틀릿, 표현식 -> 가독성 저하 -> JSP 페이지는 HTML 기반이니까 프로그래밍 코드도 HTML 형식으로 만들기
+- XML 문법 기법(=> 문법이 엄격하다.)
+	a. 태그 or 속성 : 대소문자 구분한다.
+	b. <input> (X) -> <input /> (O)
+
+1. JSP 표준 액션 태그(standard.jar) - FM
+2. JSTL 액션 태그(jstl.jar) - 확장
+3. 사용자 정의 액션 태그 - 내맘대로
+
+
+
+JSP 표준 액션 태그
+
+1. forward 액션
+	- pageContext.forward(URL); //순수 자바
+	- <jsp:forward page="URL">  //XML -> 액션 태그
+	- ex19_forward_one.jsp
+	- ex19_forward_two.jsp
+
+
+2. include 액션
+	- <%@ include file="URL" %>
+	- <jsp:include page="URL">
+	- ex20_include_full.jsp
+	- ex20_include_part.jsp
+
+
+자바빈, Java Bean
+- 자바 클래스로 만든 객체
+- JSP에서 자바빈이라는 명칭으로 클래스 객체를 관리하는 기능을 제공
+- 현재 액션 태그들은 스프링 수업에도 유사한 개념이 사용이 된다.(****)
+- ex21_bean.jsp
+
+3. <jsp:useBean>
+4. <jsp:setProperty>
+5. <jsp:getProperty>	
+
+
+자바빈을 사용하면 편리한 예
+- ex22_bean_form.jsp
+- ex22_bean_process.jsp
+- Address.java
+
+
+세션, Session
+- ex26_session.jsp
+- ex26_session_set.jsp
+- ex26_session_del.jsp
+- ex26_session_reset.jsp
+- ex26_session_interval.jsp
+
+
+세션, Sesssion vs 쿠키, Cookie
+- 공통점
+	1. 고객 정보(접속한 유저)를 저장하는 매체
+	2. 유저끼리 서로 간섭을 못한다.(접근 권한 불가능)
+- 차이점
+	1. 쿠키(p205)
+		- 클라이언트측 저장(메모리 -> (만료시간) -> HDD)
+		- 문자열 저장용(자료형 존재X, 텍스트 파일)
+		- 만료 시간 지정 가능(장기 보관 + 재접속)
+	2. 세션
+		- 서버측 저장(메모리)
+		- 모든 타입 저장용(문자열 or 객체 or 기타 등등)
+		- 만료 시간 지정(접속 고객에 한해서..)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

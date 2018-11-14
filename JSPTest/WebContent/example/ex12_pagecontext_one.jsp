@@ -4,7 +4,6 @@
 	//response.sendRedirect(url) vs pageContext.forward(url)
 	//	- 둘 다 서버측 이동
 	
-	
 	//response.sendRedirect(url) vs pageContext.forward(url)
 	//	- 둘 다 서버측 이동
 	//	- 표면상 차이점
