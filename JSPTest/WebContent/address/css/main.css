@@ -1,0 +1,34 @@
+/* WebContent > address > css > main.css */
+
+@font-face { font-family: 'UhBeeBanynany'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_five@.2.0/UhBeeBanynany.woff') format('woff'); font-weight: normal; font-style: normal; }
+
+html, body, p, div, span, table, th, td, ul, h1, h2, h3, ol, li, dt, dd, input, textarea, select, option, filedset, legend, a {
+	font-family : 'UhBeeBanynany';
+}
+
+#header, #main, #footer {
+	width : 800px;
+	margin : 0px auto;
+}
+
+#header {
+	
+}
+
+#header > h1{
+	margin-top : 30px;
+	margin-bottom : 20px;
+}
+
+#main {
+	/* min-height : 내용물이 적을 떈 500px로 하고, 넘칠땐 내용물의 높이에 따라 늘려라 */
+	min-height : 500px;
+	overflow : auto;
+}
+
+#footer {
+	text-align : center;
+	border-top : 1px solid #A9A9A9;
+	padding-top : 15px;
+	padding-bottom : 50px;
+}
