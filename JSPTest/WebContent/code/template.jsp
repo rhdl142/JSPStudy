@@ -9,10 +9,8 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>주소록</title>
-		<jsp:include page="inc/asset.jsp">
-			<jsp:param value="" name="context"/>
-		</jsp:include>
+		<title>Code</title>
+		<%@ include file="inc/asset.jsp" %>
 		<style>
 
 		</style>
@@ -24,18 +22,46 @@
 	</head>
 	<body>
 		<!-- template.jsp -->
-		<div class="container">
+		
+		<div class="main">
+		
+			<header>
+				<nav></nav>
+			</header>
 			
-			<jsp:include page="inc/header.jsp"></jsp:include>
-			
-			<section id="main">
-				업무 내용
+			<section>
+				<h1></h1>
 			</section>
-			
-			<jsp:include page="inc/footer.jsp"></jsp:include>
 		</div>
 	</body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
