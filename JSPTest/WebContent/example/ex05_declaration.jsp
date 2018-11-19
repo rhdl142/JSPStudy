@@ -17,7 +17,6 @@
 		</script>
 	</head>
 	<body>
-		<!-- ex05_declaration.jsp -->
 		<%
 			int a = 10;
 		%>
@@ -35,7 +34,9 @@
 </html>
 
 <%!
-	int b = 20; //멤버 변수
+	//멤버 변수
+	int b = 20;
 
-	public void test() {} //메소드 선언 가능
+	//메소드
+	public void test() {} 
 %>

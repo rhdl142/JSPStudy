@@ -45,8 +45,6 @@
 		</script>
 	</head>
 	<body>
-		<!-- ex07_request_process.jsp -->
-		
 		<div class="container">
 			<h1 class="page-header">결과</h1>
 			

@@ -23,14 +23,12 @@
 	<body>
 		<!-- template.jsp -->
 		
-		<div class="main">
+		<div id="main">
 		
-			<header>
-				<nav></nav>
-			</header>
+			<jsp:include page="inc/header.jsp"></jsp:include>
 			
 			<section>
-				<h1></h1>
+				<h1 class="page-header"></h1>
 			</section>
 		</div>
 	</body>

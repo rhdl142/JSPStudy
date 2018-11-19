@@ -2,7 +2,9 @@
     pageEncoding="UTF-8"%>
 
 <%
-
+	//logout.jsp
+	
+	session.removeAttribute("id");//로그아웃
 %>
 
 <!DOCTYPE html>
@@ -14,24 +16,24 @@
 		<style>
 
 		</style>
-		<script>
-			$(document).ready(function(){
-	
-			});
-		</script>
+	    <script>
+	       $(document).ready(function(){
+	            
+	          alert("로그아웃 성공!!");
+	          location.href = "<%= application.getContextPath() %>/code/member.jsp";
+	           
+	       });
+	    </script>
 	</head>
 	<body>
-		<!-- index.jsp or default.jsp -->
-		<!-- index.jsp는 default 값 -->
-		<!-- http://localhost:8090/JSPTest/code/ -->
+		<!-- logout.jsp -->
+		
 		<div id="main">
 		
 			<jsp:include page="inc/header.jsp"></jsp:include>
 			
 			<section>
-				<h1 class="page-header">Index</h1>
-				
-				<p>이 사이트는 회원 관리제 소스 코드 저장 게시판 입니다.</p>
+				<h1 class="page-header">Member</h1>
 			</section>
 		</div>
 	</body>

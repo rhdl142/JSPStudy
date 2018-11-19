@@ -16,8 +16,6 @@
 		</script>
 	</head>
 	<body>
-		<!--ex07_request_form.jsp -->
-		
 		<div class="container">
 			<h1 class="page-header">버튼 만들기</h1>
 			

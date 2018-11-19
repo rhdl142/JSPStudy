@@ -493,8 +493,20 @@ JSP 페이지 만드는 방법
 	- code > add.jsp
 	- code < addok.jsp
 	- code > template.jsp
+	- code > member.jsp
+	- code > login.jsp
+	- code > logout.jsp
 
-
+4. 회원 정책
+	a. 인증 사용자
+		- 글쓰기
+		- 글목록 & 글상세 보기 가능
+		- 수정 & 삭제 : 작성자 본인만 가능
+	b. 미인증 사용자
+		- 글쓰기 불가
+		- 글목록 보기 가능
+		- 글상세 보기 불가능
+		
 
 
 

@@ -1,22 +1,11 @@
 <%@page import="java.util.Random"%>
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
-<%
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
-	//DB -> select
-	/*
+<%
 	Random rnd = new Random();
 	int num = rnd.nextInt(100);
-	num *= 2; //가공 
-	*/
 	
-	
-	/* public int getNum() {
-	   Random rnd = new Random();
-	   int num = rnd.nextInt(100);
-	   num *= 2;
-	   return num;
-	} */
+	num *= 2; 
 %>
 
 <!DOCTYPE html>
@@ -36,21 +25,17 @@
 		</script>
 	</head>
 	<body>
-		<!-- ex04_declaration.jsp -->
-		<p>
-			결과 :
-			<%= getNum() %></p>
-	
-	
+		<!-- 표현식 -->
+		<p>결과 : <%= getNum() %></p>
 	</body>
 </html>
 
+<!-- 멤버 변수 or 메소드 선언 -->
 <%!
-public int getNum() {
-   Random rnd = new Random();
-   int num = rnd.nextInt(100);
-   num *= 2;
-   return num;
-}
-
+	public int getNum() {
+	   Random rnd = new Random();
+	   int num = rnd.nextInt(100);
+	   num *= 2;
+	   return num;
+	}
 %>

@@ -17,10 +17,7 @@
 		</script>
 	</head>
 	<body>
-		<!-- ex08_request_header.jsp -->
-		
-		<!-- <h1>HTTP 요청 메세지 해더 정보</h1> -->
-		<h1>광민아 수업좀 듣자 제발</h1>
+		<h1>HTTP 요청 메세지 해더 정보</h1>
 		
 		<table class="table">
 			<tr>
@@ -32,7 +29,6 @@
 			
 				while(e.hasMoreElements()) {
 					String headerName = e.nextElement();
-					//System.out.println(headerName + ":" +request.getHeader(headerName));
      		%>
 	      <tr>
 	         <td><%= headerName %></td>

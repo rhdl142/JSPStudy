@@ -11,7 +11,7 @@
 		</style>
 		<script>
 			$(document).ready(function(){
-	
+				location.href="ex10_method_two.jsp";
 			});
 		</script>
 	</head>
@@ -24,7 +24,7 @@
 			<li>폼 태그 method="post"로 전송하는 경우</li>
 		</ul>
 		
-	   <form method="post" action="ex10_method_two.jsp">
+	   <form method="get" action="ex10_method_two.jsp">
 	      <input type="submit" value="보내기">
 	   </form>
 	   

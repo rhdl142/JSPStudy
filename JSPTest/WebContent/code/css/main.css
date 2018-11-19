@@ -2,22 +2,75 @@
 
 @font-face { font-family: 'UhBeeBanynany'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_five@.2.0/UhBeeBanynany.woff') format('woff'); font-weight: normal; font-style: normal; }
 
-* { outline : none; }
+* { outline: none; }
+
+html, body { height: 100%; }
+
 
 html, body, p, div, span, table, th, td, ul, h1, h2, h3, ol, li, dt, dd, input, textarea, select, option, filedset, legend, a {
-	font-family : 'UhBeeBanynany';
+   font-family : 'UhBeeBanynany';
 }
 
 a:hover { text-decoration: none; }
 
+
 #main {
-	width : 800px;
-	margin : 0 auto;
-	border-left : 1px solid #A9A9A9;
-	border-right : 1px solid #A9A9A9;
+   width: 800px;
+   margin: 0px auto;
+   border-left: 1px solid #A9A9A9;
+   border-right: 1px solid #A9A9A9;
+   min-height: 100%;
+   box-shadow: 0px 0px 3px #AAA;
 }
 
 #main > header {
-	border-bottom : 1px solid #A9A9A9;
-	height : 80px;
+   border-bottom: 1px solid #A9A9A9;
+   height: 80px;
+   position: relative;
+   left: 0px;
+   top: 0px;
+}
+
+#main > header > #info {
+   
+   border: 1px solid #A9A9A9;
+   width: 150px;
+   height: 200px;
+   position: absolute;
+   left: -150px;
+   top: 140px;
+   text-align: center;
+   border-top-left-radius: 5px;
+   boder-bottom-left-radius: 5px;
+}
+
+#main > header > #info > h3 {
+   border-bottom: 1px dashed #A9A9A9;
+   padding: 15px;
+   margin: 0px;
+   margin-bottom: 13px;
+}
+
+
+#main > header > nav > ul {
+   margin : 0px;
+   padding : 0px;
+}
+
+#main > header > nav > ul > li {
+   float: left;
+   width: 20%;
+   text-align: center;
+   list-style-type : none;
+   padding-top : 35px;
+   font-variant : small-caps;
+   cursor : pointer;
+}
+
+#main > header > nav > ul > li > a {
+	font-size: 25px;
+}
+
+#main > section {
+   padding : 20px;
 }
