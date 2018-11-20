@@ -123,8 +123,11 @@
 			
 			<div>
 				<input type="button" value="Back" class="btn btn-default" onclick="history.back();">
-				<input type="button" value="Edit" class="btn btn-primary">
-				<input type="button" value="Delete" class="btn btn-primary">
+				<!-- 글 작성자에게만 노출 -->
+				<% if(session.getAttribute("id").toString().equals(dto.getId()) || session.getAttribute("lv").toString().equals("2")) { %>
+				<input type="button" value="Edit" class="btn btn-primary" onclick="location.href='edit.jsp?seq=<%= dto.getSeq() %>';">
+				<input type="button" value="Delete" class="btn btn-primary" onclick="location.href='del.jsp?seq=<%= dto.getSeq() %>';">
+				<% } %>
 			</div>
 			
 			</section>

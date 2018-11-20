@@ -496,6 +496,11 @@ JSP 페이지 만드는 방법
 	- code > member.jsp
 	- code > login.jsp
 	- code > logout.jsp
+	- code > edit.jsp
+	- code < editok.jsp
+	- code < del.jsp
+	- code < delok.jsp
+	
 
 4. 회원 정책
 	a. 인증 사용자
@@ -507,21 +512,59 @@ JSP 페이지 만드는 방법
 		- 글목록 보기 가능
 		- 글상세 보기 불가능
 		
+------------------------------------------------------------------------------------
+
+MVC 디자인 패턴(JSP Model 2) + EL(Expression Language)
 
 
+새프로젝트 > NEW > Dynamic Web Project > MVCTest > web.xml 체크
 
 
+1. Servlet
+	- *.java
+	- 자바코드(쉽다) + HTML(불편)
+
+2. JSP
+	- *.jsp(html)
+	- HTML(쉽다) + 자바코드(불편)
+	
+3. Servlet + JSP
+	- *.java + *.jsp
+	- Servlet(자바코드) + JSP(HTML코드)
 
 
+MVC 방명록
+- CRUD
+- MVC(Controller, View, Model) : ********************************************************
 
+1. 패키지 생성
+	- com.test.guest
 
+2. 폴더 생성
+	- WebContent > guest
 
+3. 기존 폴더 복사
+	- WebContent > guest > asset 복사&붙여넣기
+	- WebContent > guest > images 복사&붙여넣기
 
+4. MVC 맛보기
+	a. 순수 서블릿 : Hello.java -> 임시 페이지 생성
+	b. 순수 JSP : hello.jsp -> 임시 페이지 생성
+	c. 서블릿 + JSP : Hello.java + hello.jsp  -> 임시 페이지 생성
+		- com.test.guest > Hello.java : 업무 코드(자바 사용)
+		- WebContent > guest > hello.jsp : 출력 코드, 디자인 코드(HTML..JSP)
 
-
-
-
-
+5. EL
+	a. com.test.guest > EL.java
+	b. WebContent > guest > el.jsp
+	- 자바의 표현식 <%= %>의 대체재
+	- HTML 문서 일부에 원하는 값을 출력하는 용도
+	- ${내장객체의 키}
+	- 내장객체 : pageContext, request, session, application -> setAttribute(), getAttribute
+	
+6. JSTL
+	a. com.test.guest > JSTL.java
+	b. WebContent > guest > jstl.jsp
 
 
 
